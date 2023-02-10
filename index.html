@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Login</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAnpJREFUaEPtmd1t2zAQx3mg35tMkGQDZ4I6GzQTJBskfhcFVsf3uhM0naDpBskEyQZxJ6j9LuGKA2RApiNT/KhUoSLgJ/HI/+/uLB5PIEY+YOT6xQQwdASTRyDP8xsiWhDRHADmDEhErwDAv8eiKH6mhE4GkGXZJwD4IoQ4dwhcE9HSGPOYAiQJgFKKhd97Cloh4tLT5mB6NECe5ysiugsRAgBfi6LwBd/bKgqgTpsftngi+j6bzVZa61d+prWel2V5DwA378y9jkmnKACl1JuV81sp5WIn3BbLIFVVPQkhPjSerRHxIiSCbBMMoJS6FUJ8a24spbxsE7+bV0O8NO2IKDgKwQBZlj00U8Inn21bTjljDDvEe8QAvOze87xrF++3RYHPCWPMpbf6yBSi5oaI6OUMpVSU/W5vr02bgmMFxNpPALEejLWfIhDrwVj7/ysCdc3DBRvX9ych72tPmyci+myM4bLj6HC+RtsKNtfCKZ4T0ZULwgmglGIvfEwhKGCNZ0RcHLPrArB3YgaIiDHZIOLpmAGEq0T51yMwAQj7wIlJ6BDboVJoy10KRHzQWp+UZbkAgJUQ4swXYgiAX1LKudZ60xTLIFVVra37sJNnCIAlIrK3D0bIodg7gJTy1PZ+4yp5XlUVdzI6j94Bjh3/WutRALS2SN5rxbhC0XsEhBAbKeWV3R+q+0HcxXM1f/eYhgBgAQc1jFLqd0gpPhTAQQkQeiBOAKk8l2od+0//16pRO/SjA3C9Hjs+3yLi0Tt4lwiM+0oZUr909K5zWpJLPe9SQ/C3LG6rNL+uOEUETngmIu3qSPDazhQKFNCb2QTQm6tbNhp9BP4AmU5zQKW5ipYAAAAASUVORK5CYII="/>
+        </header>
+            <div class="otp-input" id="otp-input-texts">
+                <input type="text" maxlength="1" class="num-input"/>
+                <input type="text" maxlength="1" class="num-input"/>
+                <input type="text" maxlength="1" class="num-input"/>
+                <input type="text" maxlength="1" class="num-input"/>
+                <input type="text" maxlength="1" class="num-input"/>
+
+                <label class="info-text">Ingresa el número de empleado</label>
+            </div>
+        <div class="keyboard">
+            <button class="num-1 num" onclick="set_number('1')">1</button>
+            <button class="num-2 num" onclick="set_number('2')">2</button>
+            <button class="num-3 num" onclick="set_number('3')">3</button>
+            <button class="num-4 num" onclick="set_number('4')">4</button>
+            <button class="num-5 num" onclick="set_number('5')">5</button>
+            <button class="num-6 num" onclick="set_number('6')">6</button>
+            <button class="num-7 num" onclick="set_number('7')">7</button>
+            <button class="num-8 num" onclick="set_number('8')">8</button>
+            <button class="num-9 num" onclick="set_number('9')">9</button>
+            <button class="num-x" disabled></button>
+            <button class="num-0 num" onclick="set_number('0')">0</button>
+            <button class="num-x remove" onclick="delete_number('just-one')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 1 14 14">
+                    <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                </svg>
+            </button>
+        </div>
+        <button class="btn btn-continue" id ='login-button' onclick="validate_number()" disabled>Iniciar Sesión</button>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type = "text/javascript" src="app.js"></script>  
+</body>
+</html>
